@@ -44,6 +44,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonLimpiar = new System.Windows.Forms.Button();
+            this.MensajeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown3)).BeginInit();
@@ -114,12 +115,11 @@
             // ResultadoLabel
             // 
             this.ResultadoLabel.AutoSize = true;
-            this.ResultadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultadoLabel.Location = new System.Drawing.Point(256, 148);
+            this.ResultadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultadoLabel.Location = new System.Drawing.Point(282, 133);
             this.ResultadoLabel.Name = "ResultadoLabel";
-            this.ResultadoLabel.Size = new System.Drawing.Size(82, 20);
+            this.ResultadoLabel.Size = new System.Drawing.Size(0, 37);
             this.ResultadoLabel.TabIndex = 7;
-            this.ResultadoLabel.Text = "Resultado";
             // 
             // label1
             // 
@@ -193,7 +193,6 @@
             this.label7.Size = new System.Drawing.Size(217, 23);
             this.label7.TabIndex = 14;
             this.label7.Text = "Ingrese la Probabilidad";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // buttonLimpiar
             // 
@@ -206,6 +205,16 @@
             this.buttonLimpiar.UseVisualStyleBackColor = true;
             this.buttonLimpiar.Click += new System.EventHandler(this.buttonLimpiar_Click);
             // 
+            // MensajeLabel
+            // 
+            this.MensajeLabel.AutoSize = true;
+            this.MensajeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MensajeLabel.ForeColor = System.Drawing.Color.Red;
+            this.MensajeLabel.Location = new System.Drawing.Point(74, 285);
+            this.MensajeLabel.Name = "MensajeLabel";
+            this.MensajeLabel.Size = new System.Drawing.Size(0, 20);
+            this.MensajeLabel.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,6 +223,7 @@
             this.BackgroundImage = global::ProbabilidadDeUnDado.Properties.Resources.Dados;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(458, 314);
+            this.Controls.Add(this.MensajeLabel);
             this.Controls.Add(this.buttonLimpiar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -263,6 +273,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonLimpiar;
+        private System.Windows.Forms.Label MensajeLabel;
     }
 }
 

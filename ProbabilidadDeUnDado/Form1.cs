@@ -19,6 +19,7 @@ namespace ProbabilidadDeUnDado
             NumericUpDown5.Value = 0;
             NumericUpDown6.Value = 0;
             ResultadoLabel.Text = string.Empty;
+            MensajeLabel.Text = string.Empty;
 
         }
 
@@ -29,7 +30,10 @@ namespace ProbabilidadDeUnDado
 
         public void LanzarDado()
         {
-            ValidarCampos();
+            if (!ValidarCampos())
+                return;
+
+            MensajeLabel.Text = string.Empty;
             int uno, dos, tres, cuatro, cinco, seis, numero;
 
             uno = Convert.ToInt32(NumericUpDown1.Value);
@@ -56,57 +60,19 @@ namespace ProbabilidadDeUnDado
             else
                 ResultadoLabel.Text = "6";
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
       
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
         }
 
-
-
         private bool ValidarCampos()
         {
             bool comprobar = true;
 
-            if (NumericUpDown1.Value > 100)
+            if (NumericUpDown1.Value + NumericUpDown2.Value + NumericUpDown3.Value + NumericUpDown4.Value + NumericUpDown5.Value + NumericUpDown6.Value != 100)
             {
-                MessageBox.Show("La probabilidad debe ser menor a 100%!!");
-                comprobar = false;
-            }
-
-            if (NumericUpDown2.Value > 100)
-            {
-                MessageBox.Show("La probabilidad debe ser menor a 100%!!");
-                comprobar = false;
-            }
-
-            if (NumericUpDown3.Value > 100)
-            {
-                MessageBox.Show("La probabilidad debe ser menor a 100%!!");
-                comprobar = false;
-            }
-
-            if (NumericUpDown4.Value > 100)
-            {
-                MessageBox.Show("La probabilidad debe ser menor a 100%!!");
-                comprobar = false;
-            }
-
-            if (NumericUpDown5.Value > 100)
-            {
-                MessageBox.Show("La probabilidad debe ser menor a 100%!!");
-                comprobar = false;
-            }
-
-            if (NumericUpDown6.Value > 100)
-            {
-                MessageBox.Show("La probabilidad debe ser menor a 100%!!");
+                MensajeLabel.Text = "La suma de los porcentajes debe ser igual a 100";
                 comprobar = false;
             }
 
